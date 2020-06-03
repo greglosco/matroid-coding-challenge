@@ -1,15 +1,22 @@
 import React, { Component } from 'react';
+import Events from '../components/Events';
+import { fetchEvents } from '../actions/events';
 
 class EventsContainer extends Component {
 
     render() {
+        const { events, fetchEvents } = this.props;
         return (
             <div>
-                <Events />
+                <Events events={events} fetchEvents={fetchEvents} />
             </div>
         )
     }
 
 }
 
-export default EventsContainer;
+const mapStateToProps = ({events}) => ({events});
+
+const mapDispatchToProps = ({fetchEvents});
+
+export default connect(mapStateToProps, mapDispatchToProps)(EventsContainer);
