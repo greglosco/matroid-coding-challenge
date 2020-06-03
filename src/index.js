@@ -8,11 +8,18 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
+import manageEvents from './reducers/eventsReducer';
 
+const store = createStore(manageEvents, composeWithDevTools(
+  applyMiddleware(thunk)
+))
 
 ReactDOM.render(
+  
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App store={store} />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
