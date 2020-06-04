@@ -11,7 +11,7 @@ class Events extends Component {
 
         const { events } = this.props
 
-        const renderedEvents = events.map(event => <Event event={event} />)
+        const renderedEvents = events.map(event => <Event key={event.id} event={event} />)
 
         return (
             <div>

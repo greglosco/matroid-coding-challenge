@@ -27,7 +27,7 @@ class Event extends Component {
                 {this.state.open ? (
                     <div>
                         <img src={event.imageSource} /><br/>
-                        {console.log(event.predictions)}
+                        <p>{(new Date(event.timestamp * 1000).toLocaleTimeString('it-IT'))}</p>
                         {event.predictions.map(prediction => (
                             <div>
                                 <h5>Bounding Box:</h5>
