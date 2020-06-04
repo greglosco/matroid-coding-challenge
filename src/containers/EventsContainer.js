@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Events from '../components/Events';
 import { fetchEvents } from '../actions/events';
+import { connect } from 'react-redux';
 
 class EventsContainer extends Component {
 

@@ -4,7 +4,7 @@ function manageEvents(state = {
     switch (action.type) {
         case 'RENDER_EVENTS':
             return {...state,
-            events: [action.res]
+            events: action.eventData
         }
         default:
             return state;
