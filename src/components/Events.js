@@ -8,8 +8,8 @@ class Events extends Component {
         this.state = {
             labelSearch: "",
             scoreSearch: "",
-            videoStreamSearch: "",
-            timestampSearch: ""
+            // videoStreamSearch: "",
+            // timestampSearch: ""
         }
     }
 
@@ -44,13 +44,18 @@ class Events extends Component {
 
         return (
             <div>
-                <div>
-                    <label>Filter By: </label>
-                    <input type="text" name="labelSearch" placeholder="prediction label" value={this.state.labelSearch} onChange={this.handleOnChange} />
-                    <input type="text" name="scoreSearch" placeholder="prediction score" value={this.state.scoreSearch} onChange={this.handleOnChange} />
-                    <input type="text" name="videoStreamSearch" placeholder="videoStream" value={this.state.videoStreamSearch} onChange={this.handleOnChange} />
-                    <input type="text" name="timestampSearch" placeholder="timestamp" value={this.state.timestampSearch} onChange={this.handleOnChange} />
+                <br/>
+                <div className="ui form">
+                    <div className="inline field"><label>Filter By: </label>
+                        <div className="ui two wide input"><input type="text" name="labelSearch" placeholder="prediction label" value={this.state.labelSearch} onChange={this.handleOnChange} /></div>
+                        <div className="ui two wide input"><input type="text" name="scoreSearch" placeholder="prediction score" value={this.state.scoreSearch} onChange={this.handleOnChange} /></div>
+                        {/* <input type="text" name="videoStreamSearch" placeholder="videoStream" value={this.state.videoStreamSearch} onChange={this.handleOnChange} />
+                        <input type="text" name="timestampSearch" placeholder="timestamp" value={this.state.timestampSearch} onChange={this.handleOnChange} /> */}
+                     </div>
                 </div>
+
+                <br/>
+                
                 <div>
                     {renderedEvents}
                 </div>

@@ -13,7 +13,7 @@ class EventsContainer extends Component {
         const { events } = this.props;
         
         return (
-            <div>
+            <div className="ui centered padded one column grid">
                 <Events events={events} />
             </div>
         )
