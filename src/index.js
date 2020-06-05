@@ -16,11 +16,9 @@ const store = createStore(manageEvents, composeWithDevTools(
 
 ReactDOM.render(
   
-  <React.StrictMode>
     <Provider store={store}>
       <App store={store} />
-    </Provider>
-  </React.StrictMode>,
+    </Provider>,
   document.getElementById('root')
 );
 

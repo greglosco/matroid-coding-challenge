@@ -26,7 +26,7 @@ class Event extends Component {
                 </div>
                 {this.state.open ? (
                     <div>
-                        <img src={event.imageSource} /><br/>
+                        <img src={event.imageSource} alt="failed to upload"/><br/>
                         <p>{(new Date(event.timestamp * 1000).toLocaleTimeString('it-IT'))}</p>
                         {event.predictions.map(prediction => (
                             <div>
@@ -39,9 +39,10 @@ class Event extends Component {
                                 </ul>
                                 {prediction.scores.map(score => (
                                     <div>
-                                        <h5>Score:</h5>
-                                        {score.label},
-                                        {score.score}
+                                        <ul>
+                                            <li><h5>Prediction Label:</h5>{score.label}</li>
+                                            <li><h5>Prediction Score:</h5>{score.score}</li>
+                                        </ul>
                                     </div>
                                 ))}
                             </div>

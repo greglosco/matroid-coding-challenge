@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import Events from '../components/Events';
-import EventsFilter from '../components/EventsFilter';
 import { fetchEvents } from '../actions/events';
 import { connect } from 'react-redux';
 
 class EventsContainer extends Component {
 
+    componentDidMount() {
+        this.props.fetchEvents()
+    }
+
     render() {
-        const { events, fetchEvents } = this.props;
+        const { events } = this.props;
+        
         return (
             <div>
-                <EventsFilter />
-                <Events events={events} fetchEvents={fetchEvents} />
+                <Events events={events} />
             </div>
         )
     }

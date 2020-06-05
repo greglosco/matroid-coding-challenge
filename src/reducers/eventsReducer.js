@@ -3,7 +3,7 @@ function manageEvents(state = {
 }, action) {
     switch (action.type) {
         case 'RENDER_EVENTS':
-            return {...state,
+            return {
             events: action.eventData
         }
         default:
