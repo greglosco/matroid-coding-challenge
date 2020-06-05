@@ -6,4 +6,4 @@ Instructions for Local Installation
 
 2. Install the project dependencies and start the server by running the following command:
 
-    npm i && npm start
+    ```npm i && npm start```
