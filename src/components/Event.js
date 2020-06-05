@@ -5,7 +5,7 @@ class Event extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            open: false
+            open: false,
         }
     }
 
@@ -49,7 +49,7 @@ class Event extends Component {
                                             <li className="item">Width: {prediction.boundingBox.width}</li>
                                     </div>
                                 </div>
-                                <h3 className="ui horizontal blue label">Score:</h3><br/>
+                                <h3 className="ui horizontal blue label">Scores:</h3><br/>
                                 {prediction.scores.map(score => (
                                     <div className="item"> 
                                         <div className="ui horizontal list">
